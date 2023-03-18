@@ -34,8 +34,7 @@ This example configures Terraform to store the state file in an S3 bucket named 
 When multiple users are working with the same state file, there is a risk of conflicts and overwriting changes. To prevent this, Terraform supports state locking, which allows users to lock the state file while they are making changes. This prevents other users from making changes to the same resources at the same time.
 
 To enable state locking on AWS, you can use the dynamodb backend, which provides a locking mechanism using an Amazon DynamoDB table. To configure state locking with DynamoDB, you can modify the terraform block in your configuration file as follows:
-```
-terraform
+```terraform
 
 terraform {
   backend "s3" {
